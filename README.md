@@ -6,15 +6,11 @@ get cert chain from target host, parse it and put each cert to java keystore
 ./certripper.sh -k=/home/esb/wso2esb-4.8.1/repository/resources/security/client-truststore.jks -p=wso2carbon -h=example.com:443 -n=example.com
 ```
 ### commands:
-> -k    or --path-to-keystore  = path to keystore 
-> 
-> -p    or --keysotre-password = keystore password
->
-> -h    or --host              = target host
->
-> -n    or --name              = alias prefix
->
-> -help or --usage             = help
+    -k    or --path-to-keystore  = path to keystore 
+    -p    or --keysotre-password = keystore password
+    -h    or --host              = target host
+    -n    or --name              = alias prefix
+    -help or --usage             = help
 
 ### quirks 
 please note: keytool must be in $PATH variable, if not - you get an error about unknown command, you can fix that by adding path to keytool utility to $PATH variable or make ``` find / -name "keytool" ``` which will give you something like: ``` /usr/lib/jvm/java-7/bin/keytool ``` and replace path to keytool in script on 67 string.
